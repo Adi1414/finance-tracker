@@ -1,0 +1,11 @@
+<div class="col-sm-4">
+	<%= render 'layouts/messages' %>
+</div>
+
+<% if @stock %>
+<div class=" result-box">
+  <strong>Name: </strong><%= @stock.name %>
+  <strong>Symbol: </strong><%= @stock.ticker %>
+  <strong>Price: </strong><%= @stock.last_price %>
+</div>
+<% end %>

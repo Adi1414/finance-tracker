@@ -6,8 +6,11 @@ def self.new_lookup(ticker_symbol)
 								  secret_token: Rails.application.credentials.iex_client[:sandbox_secret_key],
 								  endpoint: 'https://sandbox.iexapis.com/v1'
 								)
-  client.price(ticker_symbol)
- 
+ begin
+  new(name: client.company(ticker_symbol).company_name ,ticker: ticker_symbol ,last_price: client.price(ticker_symbol) )
+ rescue => exception
+  return nil
+ end	
 end
 
 end
