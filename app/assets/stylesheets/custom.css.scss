@@ -14,12 +14,45 @@
 
 .result-box{
 	display: inline;
-	width: 150em;
 }
 
+.results-block {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
 .logout{
 	margin-right: 5px;
 }
 .name_styling{
 	padding-right: 5px;
+	color: #fff
 }
+ .jumbotron{
+ background-image: url('welcome.jpg');
+ background-size: cover;
+ height: 300px
+ }
+
+  .jumbotron h1{
+ text-align: center;
+ margin-bottom: 30px;
+ color: #fff;
+ letter-spacing: -1px;
+ font-weight: bold;
+ }
+
+ .jumbotron h2{
+ text-align: center;
+ margin-bottom: 30px;
+ color: #fff;
+ letter-spacing: -1px;
+ font-weight: bold;
+ }
+
+ .myNavbar   {
+    background-color: #056180;
+ }
+
+ .uniform_color{
+ background-color: #d8e0e3;
+ }

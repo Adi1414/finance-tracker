@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg myNavbar">
   <div class="container">
   <%= link_to "Finance Tracker", root_path,class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,24 +11,10 @@
         <%= link_to "My Protfolio", my_portfolio_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <%= link_to "My Friends", my_friends_path, class: "nav-link" %>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Profile
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to( edit_user_registration_path, class: "dropdown-item") do %>
-            <%= fa_icon "edit" %> Edit Profile
-          <% end %>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
+    
+     
     </ul>
      <ul class="navbar-nav ">
        <li class="nav-item name_styling">
@@ -40,11 +26,19 @@
        <li class="nav-item">
         <%= link_to "Logout", destroy_user_session_path,class: "nav-link btn-sm btn-danger logout",method: :delete %>
       </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to( edit_user_registration_path, class: "dropdown-item") do %>
+            <%= fa_icon "edit" %> Edit Profile
+          <% end %>
+         
+        </div>
+      </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+ 
     </div>
   </div>
 </nav>

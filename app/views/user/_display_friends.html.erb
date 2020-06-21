@@ -1,0 +1,25 @@
+
+<% if !@friends.nil? && !@friends.empty? %>
+<div class="col-sm-9">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @friends.each do |friend| %>
+    <tr>
+      <td><%= friend.full_name %></td>
+      <td> <%= link_to "View Profile", user_path(friend),
+                              class: "btn btn-sm btn-success" %> 
+        <%= link_to 'Unfollow', friendship_path(friend), method: :delete, 
+                                   class: 'btn btn-sm btn-danger' %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
+<% end %>
